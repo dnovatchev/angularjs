@@ -1,0 +1,12 @@
+﻿<h1>Repo: {{repo.name}}</h1>
+<div>Open issues: {{repo.open_issues_count}}</div>
+<br />
+<br />
+<div>Contributors: {{contributors.length}}</div>
+<div>
+    <ul>
+        <li ng-repeat="contrib in contributors | orderBy:contibSortOrder">
+            <img ng-src="{{contrib.avatar_url}}" height="100" width="100"> {{contrib.login}}
+        </li>
+    </ul>
+</div>
